@@ -1,0 +1,260 @@
+@charset "UTF-8";
+/*Обнуление*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+:root {
+  --font: "Montserrat", sans-serif;
+  --prime-font:"Work Sans", sans-serif;
+  --bg:#1a1c20;
+  --main-color:#f9813a;
+  --main-font-color:#fdfbfb;
+  --sec-font-color:#fcf1f1b4;
+}
+
+body {
+  background: var(--bg);
+  font-family: var(--font);
+  color: var(--main-font-color);
+  overflow-x: hidden;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav {
+  width: 85%;
+  height: 70px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.checkbtn {
+  display: none;
+}
+
+.nav .logo {
+  font-size: 2em;
+}
+
+.nav ol {
+  list-style: none;
+}
+
+.nav ol a {
+  text-decoration: none;
+  color: var(--sec-font-color);
+  margin: 0.3em;
+  padding: 0.5em 1.5em;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.nav ol a:hover {
+  transition: background 0.8s;
+  -webkit-transition: background 0.8s;
+  -moz-transition: background 0.8s;
+  -ms-transition: background 0.8s;
+  -o-transition: background 0.8s;
+  background: var(--main-color);
+}
+
+.main {
+  width: 85%;
+  height: 650px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.main::before, .main::after {
+  content: "";
+  width: 80%;
+  height: 70%;
+  background: #151618;
+  position: absolute;
+  bottom: 0;
+  right: -10%;
+  z-index: -10;
+}
+
+.main::after {
+  background: #15161885;
+  height: 60%;
+  top: 20px;
+  left: -40%;
+  border-top: 1px solid #f9803a;
+  border-right: 1px solid #4985c9;
+  z-index: -11;
+}
+
+.box h1 {
+  font-size: 4.5em;
+  margin-bottom: 0.2em;
+}
+
+.box p {
+  font-size: 2em;
+  color: var(--sec-font-color);
+  margin-bottom: 1.2em;
+}
+
+.box .btn {
+  font-size: 1.2em;
+  background: none;
+  color: var(--sec-font-color);
+  border: none;
+  cursor: pointer;
+  border: 1px solid var(--main-color);
+  width: 7em;
+  height: 2.2em;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+}
+
+.box .btn:hover {
+  background: var(--main-color);
+}
+
+.main img {
+  width: 30em;
+  height: 45em;
+  position: absolute;
+  right: 160px;
+  z-index: -1;
+  top: 20px;
+}
+
+@media (max-width: 1250px) {
+  .main img {
+    width: 26em;
+    height: 40em;
+    right: 0;
+  }
+}
+@media (max-width: 1000px) {
+  body {
+    font-size: 14px;
+  }
+
+  .main img {
+    width: 25em;
+    top: 70px;
+  }
+
+  .main {
+    align-items: flex-end;
+    top: -30px;
+  }
+
+  .checkbtn {
+    display: block;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    position: relative;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+}
+@media (max-width: 900px) {
+  .main img {
+    height: 35em;
+  }
+}
+@media (max-width: 400px) {
+  body {
+    font-size: 10px;
+  }
+
+  .main {
+    height: 550px;
+  }
+}
+@media (max-width: 320px) {
+  .main {
+    height: 650px;
+    width: 300px;
+  }
+}
